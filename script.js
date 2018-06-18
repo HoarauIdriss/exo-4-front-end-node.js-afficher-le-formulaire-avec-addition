@@ -8,9 +8,17 @@ localStorage.setItem("testJSON", myJSON);
 //Retrieving data:
 text = localStorage.getItem("testJSON");
 obj = JSON.parse(text);
-document.getElementById("look").innerHTML = ' <div class="form-group"><label for="number1">Taper 1</label><input type="number1" class="form-control" id="number" aria-describedby="number" placeholder="1"><small id="number" class="form-text text-muted">Nous allons calculer 1 et 2 enssemble, en cliquant sur addition</small></div> ' + obj.number1 + '' +  '<div class="form-group"><label for="nombre2">Taper 2</label><input type="" class="form-control" id="number" placeholder="2"></div><button type="submit" class="btn btn-primary">Addition</button>' + obj.number2 + '';
+document.getElementById("look").innerHTML = ' <div class="form-group"><label for="number1">Taper 1</label><input type="number1" class="form-control" id="number" aria-describedby="number" placeholder="1"><small id="number" class="form-text text-muted">Nous allons calculer 1 et 2 enssemble, en cliquant sur addition</small></div> ' + obj.number1 + '' +  '<div class="form-group"><label for="nombre2">Taper 2</label><input type="" class="form-control" id="number" placeholder="2"></div><button type="submit" id="click" class="btn btn-primary">Addition</button>' + obj.number2 + '';
+
+var num1 = 1,
+    num2 = 2;
+
+function numbers() {
+  return num1 + num2; 
+}
 
 
+console.log(numbers()); // 5
 /**$(document).ready(function () {
     $.ajax({
         url: 'http://localhost:3200/liste',
